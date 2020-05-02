@@ -1,0 +1,29 @@
+
+.login-container {
+   width: 100%;/*responsividade*/
+   max-width: 1120px;
+   height: 100vh;/*ocupe a altura máxima*/
+   margin: 0 auto;/*centraliza o conteúdo na tela*/
+
+   display: flex;/*facilita os alinhamentos e por padrão todas os elementos que estiverem na mesma div ficarão alinhados horizontalmente*/
+   /*flex-direction: column; para alinhar os elementos verticalmente */
+   align-items: center;/*alinha verticalmente*/
+   justify-content: space-between;/*alinha horizontalmente*/
+}
+
+.login-container section.form {
+   width: 100%;
+   max-width: 350px;
+   margin-right: 30px;/*distancia da logo*/
+}
+
+.login-container section.form form {
+   margin-top: 100px;/*distancia acima da logo*/
+}
+
+.login-container section.form form h1 {
+   font-size:32px;
+   margin-bottom:32px;
+}
+
+
