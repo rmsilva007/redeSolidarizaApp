@@ -1,11 +1,18 @@
 import React from 'react';
 import { Feather } from '@expo/vector-icons';
+import {useNavigation} from '@react-navigation/native';//navegar o usuário p/ a próxima tela em "Ver mais detalhes"
 import { View, FlatList, Image, Text, TouchableOpacity } from 'react-native';//TouchableOpacity = torna qualquer coisa clicável e diminui a opacidade do elemento
                                                                              //FlatList = Scroll da tela
 import logoImg from '../../assets/logo.png';
 import styles from './styles';
 
 export  default function Incidents() {
+    const navigation = useNavigation();
+
+    function navigateToDetail() {
+        navigation.navigate('Detail');
+    }
+
     return(
         <View style= {styles.container}>
             
@@ -44,7 +51,7 @@ export  default function Incidents() {
                         <TouchableOpacity 
                             
                             style = {styles.detailsButton}
-                            onPress={() => {}}>
+                            onPress={ navigateToDetail }>
                             <Text style={styles.detailsButtonText}> Ver mais detalhes</Text>
                             <Feather name="arrow-right" size={16} color="#E02041"/>
                         
