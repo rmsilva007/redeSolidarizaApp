@@ -1,5 +1,5 @@
 const express = require('express');//importando o modulo express para a variavel q tera todas as funcionalidades do módulo
-const cors = require('cors');//segurança de dominio que limita o acesso somentes para sites do mesmo domínio.
+const cors = require('cors');//segurança  que limita o acesso somentes para sites do mesmo domínio.
 const { errors } = require('celebrate');//retorna erro de validação de forma adequada
 const routes = require('./routes');
 

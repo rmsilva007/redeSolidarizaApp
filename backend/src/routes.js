@@ -1,10 +1,10 @@
 //tratando as rotas do App
 const express = require('express');
 const { celebrate, Segments, Joi } = require('celebrate');//Segments são todos os tipos de segmentos que temos em uma requisição [params, headers, query, cookies, signedCookies, body]
-const myongController = require('./controllers/myongController');//importando os controllers
-const incidentController = require('./controllers/incidentController');
-const profileController = require('./controllers/profileController');
-const sessionController = require('./controllers/sessionController');
+const myongController = require('./controllers/MyongController');//importando os controllers
+const incidentController = require('./controllers/IncidentController');
+const profileController = require('./controllers/ProfileController');
+const sessionController = require('./controllers/SessionController');
 
 
 const routes = express.Router();//acoplando o módulo de rotas em uma variável
@@ -16,7 +16,7 @@ routes.get('/myong', myongController.index);
 routes.post('/myong', celebrate({//validando os dados
     [Segments.BODY]: Joi.object().keys({
         name: Joi.string().required(),//required = propriedade obrigatória
-        email: Joi.string().required().email(),//verifica se o email tem arroba e ternima com ponto alguma coisa
+        email: Joi.string().required().email(),//verifica se o email tem arroba e termina com ponto alguma coisa
         whatsapp: Joi.string().required().min(10).max(11),
         city: Joi.string().required(),
         uf: Joi.string().required().length(2),
