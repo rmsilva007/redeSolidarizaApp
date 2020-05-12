@@ -6,7 +6,7 @@ import api from '../../services/api';
 
 import './styles.css';
 
-import logoImg from '../../assets/logo.svg'
+import logoImg from '../../assets/logo5.svg'
 
 export default function Profile() {
     const[incidents, setIncidents] = useState([]);//usando o estado inicial  do componente para gravar as informações
@@ -54,7 +54,7 @@ export default function Profile() {
 
                 <Link className="button" to="/incidents/new">Cadastrar novo caso</Link>
                 <button onClick={handleLogout} type="button">
-                    <FiPower size={18} color="#E02041" />
+                    <FiPower size={18} color="#32CD32" />
                 </button>
             </header>
             

@@ -1,11 +1,11 @@
 import React, {useState} from 'react';
 import {Link, useHistory} from 'react-router-dom';
 import './styles.css';
-import {FiArrowLeft, FiAlertTriangle} from 'react-icons/fi';
+import {FiArrowLeft } from 'react-icons/fi';
 
 import api from '../../services/api';
 
-import logoImg from '../../assets/logo.svg';
+import logoImg from '../../assets/logo5.svg';
 
 export default function NewIncident() {
    const [title, setTitle] = useState('');
@@ -34,7 +34,7 @@ export default function NewIncident() {
         history.push('/profile');
       } catch (error) {
 
-         alert('Erro ao cadastrar um caso, tente novamente.')
+         alert('Erro ao cadastrar um caso, tente novamente.');
       }
 
    }

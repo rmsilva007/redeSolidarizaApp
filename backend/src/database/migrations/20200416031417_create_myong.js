@@ -1,4 +1,4 @@
-//DELETAR
+
 exports.up = function(knex) {//método up diz o que eu quero que seja feito
   
   return knex.schema.createTable('myong', function (table) {
